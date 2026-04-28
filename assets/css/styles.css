@@ -1456,76 +1456,104 @@ html[data-theme="dark"] .city-point {
   color: var(--text-soft);
 }
 
-/* ===== PREMIUM FLOATING CONTACT BUTTONS ===== */
+/* ===== PREMIUM FLOATING CONTACT BUTTONS (FIXED VERSION) ===== */
+
 .floating-actions {
   position: fixed !important;
   right: 24px !important;
   bottom: 30px !important;
   left: auto !important;
   z-index: 999999 !important;
+
   display: flex !important;
   flex-direction: column;
   gap: 14px;
-  pointer-events: auto;
+
   align-items: flex-end;
+  flex-wrap: nowrap;
+
+  pointer-events: auto;
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
+/* ===== BUTTON BASE ===== */
 .floating-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0 20px 0 0;
+
   height: 54px;
+  padding: 0 20px 0 0;
+
   border-radius: 50px;
   cursor: pointer;
-  position: relative;
+
   text-decoration: none;
   font-family: inherit;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
+
+  white-space: nowrap;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
   box-shadow: 0 6px 28px rgba(0,0,0,0.35);
   border: none;
-  white-space: nowrap;
+
+  position: relative;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.35s ease;
 }
 
+/* ===== ICON ===== */
 .floating-btn .fb-icon {
   width: 54px;
   height: 54px;
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   flex-shrink: 0;
+
   position: relative;
 }
 
 .floating-btn .fb-icon svg {
   width: 24px;
   height: 24px;
+
   stroke: #fff;
   fill: none;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+
   position: relative;
   z-index: 1;
 }
 
+/* ===== LABEL ===== */
 .floating-btn .fb-label {
   color: #fff;
   font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+
   margin-left: 2px;
-  transition: opacity 0.3s ease, max-width 0.4s ease;
+
   max-width: 120px;
   opacity: 1;
 }
 
-/* Call Button */
+/* ===== CALL BUTTON ===== */
 .call-btn {
   background: linear-gradient(135deg, #c0392b, #8B0000);
 }
@@ -1534,7 +1562,7 @@ html[data-theme="dark"] .city-point {
   background: rgba(0,0,0,0.2);
 }
 
-/* WhatsApp Button */
+/* ===== WHATSAPP BUTTON ===== */
 .wa-btn {
   background: linear-gradient(135deg, #25D366, #128C7E);
 }
@@ -1543,28 +1571,39 @@ html[data-theme="dark"] .city-point {
   background: rgba(0,0,0,0.15);
 }
 
-/* Hover Effects */
+/* ===== HOVER (NO JUMP FIXED) ===== */
 .floating-btn:hover {
-  transform: scale(1.06) translateY(-3px);
+  transform: translate3d(0, -3px, 0) scale(1.06);
   box-shadow: 0 14px 40px rgba(0,0,0,0.5);
 }
 
-/* Pulse Ring Animation */
+/* ===== PULSE ANIMATION ===== */
 .floating-btn .fb-icon::before {
   content: "";
   position: absolute;
   inset: 0;
+
   border-radius: 50%;
-  background: inherit;
-  animation: premiumPulse 2.5s ease-out infinite;
-  z-index: 0;
   background: rgba(255,255,255,0.25);
+
+  animation: premiumPulse 2.5s ease-out infinite;
+
+  z-index: 0;
 }
 
 @keyframes premiumPulse {
-  0%   { transform: scale(1);   opacity: 0.7; }
-  70%  { transform: scale(1.6); opacity: 0; }
-  100% { transform: scale(1.6); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }
 
 

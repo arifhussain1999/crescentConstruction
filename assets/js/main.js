@@ -108,18 +108,7 @@
     const wrap = document.createElement("div");
     wrap.className = "floating-actions";
     // Inline style as ultimate override — nothing can touch these
-    wrap.setAttribute("style", [
-      "position:fixed",
-      "right:24px",
-      "bottom:30px",
-      "left:auto",
-      "z-index:999999",
-      "display:flex",
-      "flex-direction:column",
-      "gap:14px",
-      "align-items:flex-end",
-      "pointer-events:auto"
-    ].join(";"));
+  wrap.className = "floating-actions";
 
     wrap.innerHTML = `
       <a class="floating-btn wa-btn" href="${wa}" target="_blank" rel="noreferrer" aria-label="WhatsApp Us">
