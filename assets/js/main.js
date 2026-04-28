@@ -19,14 +19,7 @@
     const footer = qs("#site-footer");
     if (header) {
       header.innerHTML = `
-        <div class="topbar">
-          <div class="container topbar-inner">
-            <div class="topbar-links">
-              <a href="tel:${data.company.phonePrimaryLink}">${data.company.phonePrimary}</a>
-              <a href="mailto:${data.company.email}">${data.company.email}</a>
-            </div>
-          </div>
-        </div>
+        
         <div class="navbar-shell">
           <div class="container navbar">
             <a class="brand" href="index.html" aria-label="${data.company.name}">
@@ -109,7 +102,7 @@
   function initFloatingButtons() {
     if (qs(".floating-actions")) return; // already exists
 
-    const wa  = data.company.whatsappLink;
+    const wa = data.company.whatsappLink;
     const tel = data.company.phonePrimaryLink;
 
     const wrap = document.createElement("div");
@@ -218,7 +211,7 @@
       const toggle = event.target.closest(".nav-toggle");
       const nav = qs("#site-nav");
       const overlay = qs(".nav-overlay");
-      
+
       if (toggle && nav) {
         const isOpen = nav.classList.toggle("open");
         if (overlay) overlay.classList.toggle("active", isOpen);
@@ -610,7 +603,7 @@
 
         const formData = new FormData(form);
         formData.append("access_key", "2972fada-14ec-47b4-8549-1bc9a7728850");
-        
+
         const type = form.dataset.mailForm;
         const subjectMap = {
           contact: "Website Enquiry",
@@ -646,12 +639,12 @@
               `;
               document.body.appendChild(modal);
             }
-            
+
             // Trigger animation
             setTimeout(() => {
               modal.classList.add('active');
             }, 10);
-            
+
             form.reset();
           } else {
             alert("Something went wrong! Please try again.");
@@ -713,32 +706,7 @@
     });
   }
 
-  function initLightbox() {
-    const lightbox = document.createElement("div");
-    lightbox.className = "lightbox";
-    lightbox.innerHTML = '<button type="button" class="lightbox-close" aria-label="Close">×</button><img alt=""><p></p>';
-    document.body.appendChild(lightbox);
-    const lightboxImage = qs("img", lightbox);
-    const caption = qs("p", lightbox);
 
-    document.addEventListener("click", (event) => {
-      const trigger = event.target.closest("[data-lightbox]");
-      if (trigger) {
-        lightbox.classList.add("open");
-        lightboxImage.src = trigger.getAttribute("href") || trigger.dataset.lightbox;
-        lightboxImage.alt = trigger.dataset.caption || "";
-        caption.textContent = trigger.dataset.caption || "";
-        event.preventDefault();
-      }
-      if (
-        event.target === lightbox ||
-        event.target.closest(".lightbox-close")
-      ) {
-        lightbox.classList.remove("open");
-        lightboxImage.src = "";
-      }
-    });
-  }
 
   function initReveal() {
     const observer = new IntersectionObserver(
@@ -876,6 +844,74 @@
     });
   }
 
+  const GALLERIES = {
+    presidency: [
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_1_tkxghr.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_anngtt.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_1_okww2q.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_bpizqo.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.19_ngtawe.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392209/WhatsApp_Image_2026-04-28_at_13.43.17_vwfiqn.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392206/WhatsApp_Image_2026-04-28_at_13.43.17_1_bw8qst.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.16_xvfopi.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.15_fkdtpl.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392204/WhatsApp_Image_2026-04-28_at_13.43.15_1_carnq7.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392200/WhatsApp_Image_2026-04-28_at_13.43.14_fz8xll.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.14_1_isyhwq.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.13_3_mnts8n.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392173/WhatsApp_Image_2026-04-28_at_13.43.13_1_qwcgzf.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_2_mhknvr.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_pex4hs.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_1_tdhbdc.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_2_grki1f.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392168/WhatsApp_Image_2026-04-28_at_13.43.11_1_avbb8h.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392167/WhatsApp_Image_2026-04-28_at_13.43.09_gu1pz9.jpg",
+  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392161/WhatsApp_Image_2026-04-28_at_13.43.04_2_qekzcx.jpg"
+]
+  };
+
+  window.openGallery = function (project) {
+  const modal = document.getElementById("galleryModal");
+  const grid = document.getElementById("galleryGrid");
+
+  // clear old images
+  grid.innerHTML = "";
+
+  // render images
+  GALLERIES[project].forEach(link => {
+    const img = document.createElement("img");
+    img.src = link;
+    img.loading = "lazy";
+    grid.appendChild(img);
+  });
+
+  // show modal
+  modal.style.display = "flex";
+
+  // 🔥 FIX 1: reset scroll inside modal
+  const content = document.querySelector(".gallery-content");
+  if (content) content.scrollTop = 0;
+
+  // 🔥 FIX 2: ensure modal opens from top
+  modal.scrollTop = 0;
+
+  // 🔥 FIX 3: lock background scroll
+  document.body.style.overflow = "hidden";
+
+  // 🔥 FIX 4: auto scroll to top (safe UX)
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+window.closeGallery = function () {
+  const modal = document.getElementById("galleryModal");
+
+  modal.style.display = "none";
+
+  // 🔥 restore scroll
+  document.body.style.overflow = "auto";
+};
+
+
   document.addEventListener("DOMContentLoaded", () => {
     // Logo Micro Pulse
     const brandImg = qs(".brand img");
@@ -903,7 +939,6 @@
     initCalculator();
     initForms();
     initAIFleet();
-    initLightbox();
     initRipple();
     initReveal();
     initLazyImages();

@@ -3265,3 +3265,118 @@ html {
     left: 50%;
   }
 }
+
+
+/* Govt. Tender */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.gallery-content {
+  width: 90%;
+  max-width: 1200px;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.gallery-content {
+  position: relative;
+}
+
+.close-btn {
+  position: sticky;
+  top: 10px;
+
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 28px;
+  color: #111;
+  cursor: pointer;
+
+  width: fit-content;
+  padding: 6px 10px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  z-index: 1000;
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,1);
+}
+
+.gallery-grid-popup {
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.gallery-grid-popup img {
+  width: 100%;
+  border-radius: 10px;
+}
+.project-overlay {
+  pointer-events: none;
+}
+.view-more-btn {
+  position: relative;
+  z-index: 10;
+}
+
+
+.scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin: 10px auto 18px;
+  padding: 8px 14px;
+
+  font-size: 13px;
+  font-weight: 500;
+ color: rgba(255, 255, 255, 0.85);
+
+  background: black;
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+  animation: floatHint 1.8s ease-in-out infinite;
+  user-select: none;
+}
+
+/* little floating effect */
+@keyframes floatHint {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
+  }
+}

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Government Tenders | CRESCENT CONSTRUCTION</title>
-  <meta name="description" content="Government tender capability of CRESCENT CONSTRUCTION featuring the ongoing Presidency University restoration assignment in Kurseong.">
+  <meta name="description"
+    content="Government tender capability of CRESCENT CONSTRUCTION featuring the ongoing Presidency University restoration assignment in Kurseong.">
   <link rel="icon" type="image/svg+xml" href="assets/images/branding/favicon.svg">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.dataset.theme=localStorage.getItem("kuber-theme")||"dark";</script>
+  <script>document.documentElement.dataset.theme = localStorage.getItem("kuber-theme") || "dark";</script>
   <script defer src="assets/js/site-data.js"></script>
-  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js?v=2"></script>
 </head>
+
 <body data-page="tenders">
   <div id="site-header"></div>
   <main>
@@ -30,7 +33,8 @@
           <h2>Issued through Mackintosh Burn Limited in 2026.</h2>
           <p>
             The work involves repairing and restoration of the residential portion of Presidency University at
-            Dowhill, Kurseong in the district of Darjeeling, including execution of civil, S &amp; P and electrical works
+            Dowhill, Kurseong in the district of Darjeeling, including execution of civil, S &amp; P and electrical
+            works
             at Faculty Block C and the Girls Hostel.
           </p>
           <div class="metric-grid">
@@ -55,9 +59,21 @@
 
     <section class="section">
       <div class="container grid-3">
-        <article class="card info-card reveal"><div class="card-kicker">C</div><h3>Civil Works</h3><p>Repair, restoration and structural execution support aligned with occupied institutional environments.</p></article>
-        <article class="card info-card reveal"><div class="card-kicker">S</div><h3>S &amp; P Works</h3><p>Integrated package coordination as part of broader restoration delivery.</p></article>
-        <article class="card info-card reveal"><div class="card-kicker">E</div><h3>Electrical Works</h3><p>Electrical package execution for essential residential and institutional utility requirements.</p></article>
+        <article class="card info-card reveal">
+          <div class="card-kicker">C</div>
+          <h3>Civil Works</h3>
+          <p>Repair, restoration and structural execution support aligned with occupied institutional environments.</p>
+        </article>
+        <article class="card info-card reveal">
+          <div class="card-kicker">S</div>
+          <h3>S &amp; P Works</h3>
+          <p>Integrated package coordination as part of broader restoration delivery.</p>
+        </article>
+        <article class="card info-card reveal">
+          <div class="card-kicker">E</div>
+          <h3>Electrical Works</h3>
+          <p>Electrical package execution for essential residential and institutional utility requirements.</p>
+        </article>
       </div>
     </section>
 
@@ -68,28 +84,34 @@
           <h2>Site visuals from the Presidency University restoration work.</h2>
         </div>
         <div class="gallery-grid">
-          <a href="assets/images/projects/government/presidency-1.jpeg" data-lightbox data-caption="Presidency University exterior">
-            <img src="assets/images/projects/government/presidency-1.jpeg" alt="Presidency University exterior">
-          </a>
-          <a href="assets/images/projects/government/presidency-2.jpeg" data-lightbox data-caption="Presidency University building corner">
-            <img src="assets/images/projects/government/presidency-2.jpeg" alt="Presidency University building corner">
-          </a>
-          <a href="assets/images/projects/government/presidency-3.jpeg" data-lightbox data-caption="Presidency University campus perspective">
-            <img src="assets/images/projects/government/presidency-3.jpeg" alt="Presidency University campus perspective">
-          </a>
-          <a href="assets/images/projects/government/presidency-4.jpeg" data-lightbox data-caption="Presidency University side elevation">
-            <img src="assets/images/projects/government/presidency-4.jpeg" alt="Presidency University side elevation">
-          </a>
-          <a href="assets/images/projects/government/presidency-5.jpeg" data-lightbox data-caption="Presidency University facade detail">
-            <img src="assets/images/projects/government/presidency-5.jpeg" alt="Presidency University facade detail">
-          </a>
-          <a href="assets/images/projects/government/presidency-6.jpeg" data-lightbox data-caption="Presidency University approach view">
-            <img src="assets/images/projects/government/presidency-6.jpeg" alt="Presidency University approach view">
-          </a>
+          <div class="project-card">
+
+            <!-- COVER IMAGE -->
+            <img src="https://promaninfi.com/blog/wp-content/uploads/2023/03/Blog5_India_Infra_Projects_2023.jpg"
+              alt="Presidency University">
+
+            <!-- BUTTON -->
+            <button class="view-more-btn" onclick="openGallery('presidency')">
+              View More
+            </button>
+
+          </div>
         </div>
       </div>
     </section>
+    <div id="galleryModal" class="gallery-modal">
+  
+  <div class="gallery-content">
+    <span class="close-btn" onclick="closeGallery()">&times;</span>
+
+    <div class="scroll-hint">↓ Scroll down to view all images</div>
+
+    <div id="galleryGrid" class="gallery-grid-popup"></div>
+  </div>
+
+</div>
   </main>
   <footer id="site-footer"></footer>
 </body>
+
 </html>
