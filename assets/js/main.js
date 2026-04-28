@@ -97,6 +97,21 @@
     qsa("[data-current-year]").forEach((node) => {
       node.textContent = new Date().getFullYear();
     });
+
+    // Add floating action buttons if they don't exist
+    if (!qs(".floating-actions")) {
+      const floatingActions = document.createElement("div");
+      floatingActions.className = "floating-actions";
+      floatingActions.innerHTML = `
+        <a href="tel:+917797720372" class="floating-btn call-btn" aria-label="Call Us">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="https://wa.me/917797720372" class="floating-btn wa-btn" aria-label="WhatsApp Us" target="_blank" rel="noreferrer">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14.08 8.38 8.38 0 0 1 3.8.9l.5.3 4.2-1.1-1.1 4.2.3.5Z"></path></svg>
+        </a>
+      `;
+      document.body.appendChild(floatingActions);
+    }
   }
 
   function initFloatingButtons() {
@@ -257,17 +272,29 @@
   }
 
   function renderServices() {
+    const serviceIcons = [
+      `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`,
+      `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+      `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>`,
+      `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>`,
+      `<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`
+    ];
+
     qsa('[data-render="services"]').forEach((container) => {
       container.innerHTML = data.services
         .map(
-          (service) => `
-            <article class="card service-card">
-              <div class="card-kicker">${service.title.split(" ")[0]}</div>
-              <h3>${service.title}</h3>
-              <p>${service.summary}</p>
-              <ul class="feature-list">
-                ${service.points.map((point) => `<li>${point}</li>`).join("")}
-              </ul>
+          (service, index) => `
+            <article class="service-card reveal">
+              <div class="service-icon-box">${serviceIcons[index] || serviceIcons[0]}</div>
+              <div class="service-content">
+                <span class="service-category">${service.title.split(" ")[0]}</span>
+                <h3>${service.title}</h3>
+                <p>${service.summary}</p>
+                <ul class="feature-list-gold">
+                  ${service.points.map((point) => `<li>${point}</li>`).join("")}
+                </ul>
+              </div>
+              <div class="service-glow"></div>
             </article>
           `
         )
@@ -288,27 +315,50 @@
       container.innerHTML = projects
         .map(
           (project) => `
-            <article class="project-card" data-category="${project.category}">
-              <div class="project-image">
-                <img src="${project.image}" alt="${project.title}">
-                <div class="project-overlay">
-                  <span style="color: #fff; font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                    View Case Study
-                  </span>
-                </div>
-                <div class="project-status-badge">${project.status}</div>
-              </div>
-              <div class="project-body">
-                <div class="project-meta">
-                  <span class="pill">${project.category}</span>
-                  <span class="pill">${project.year}</span>
-                </div>
-                <h3>${project.title}</h3>
-                <p>${project.summary}</p>
-                <strong>${project.highlight}</strong>
-                <a class="btn-project" href="${project.slug}">View Project Details</a>
-              </div>
-            </article>
+            ${project.title === 'Kuber Niwas' 
+              ? `<a href="https://wa.me/917797720372?text=I%20am%20interested%20in%20${encodeURIComponent(project.title)}" target="_blank" rel="noreferrer" class="project-card" data-category="${project.category}">
+                  <div class="project-image">
+                    <img src="${project.image}" alt="${project.title}">
+                    <div class="project-overlay">
+                      <span style="color: #fff; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                        Enquire Now
+                      </span>
+                    </div>
+                    <div class="project-status-badge">${project.status}</div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span class="pill">${project.category}</span>
+                      <span class="pill">${project.year}</span>
+                    </div>
+                    <h3>${project.title}</h3>
+                    <p>${project.summary}</p>
+                    <strong>${project.highlight}</strong>
+                    <div class="btn-project btn-enquiry">Enquiry</div>
+                  </div>
+                </a>`
+              : `<a href="${project.slug}" class="project-card" data-category="${project.category}">
+                  <div class="project-image">
+                    <img src="${project.image}" alt="${project.title}">
+                    <div class="project-overlay">
+                      <span style="color: #fff; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                        View Details
+                      </span>
+                    </div>
+                    <div class="project-status-badge">${project.status}</div>
+                  </div>
+                  <div class="project-body">
+                    <div class="project-meta">
+                      <span class="pill">${project.category}</span>
+                      <span class="pill">${project.year}</span>
+                    </div>
+                    <h3>${project.title}</h3>
+                    <p>${project.summary}</p>
+                    <strong>${project.highlight}</strong>
+                    <div class="btn-project">View Project Details</div>
+                  </div>
+                </a>`
+            }
           `
         )
         .join("");
@@ -329,7 +379,7 @@
                 <span class="pill">${item.metric}</span>
                 <h3>${item.title}</h3>
                 <p>${item.summary}</p>
-                <a class="btn btn-sm btn-wa" href="https://wa.me/919113925265?text=Hello%2C%20I%20am%20enquiring%20about%20the%20${encodeURIComponent(item.title)}" target="_blank" rel="noreferrer">Enquire Now</a>
+                <a class="btn btn-sm btn-wa" href="https://wa.me/917797720372?text=Hello%2C%20I%20am%20enquiring%20about%20the%20${encodeURIComponent(item.title)}" target="_blank" rel="noreferrer">Enquire Now</a>
               </div>
             </article>
           `

@@ -4,12 +4,12 @@ window.SITE_DATA = {
     shortName: "Crescent",
     tagline: "Building Tomorrow With Strength & Precision",
     email: "crescentconstruction3@gmail.com",
-    phonePrimary: "+91 9113925265",
-    phonePrimaryLink: "+919113925265",
+    phonePrimary: "+91 77977 20372",
+    phonePrimaryLink: "+917797720372",
     phoneSecondary: "+91 95633 85027",
     phoneSecondaryLink: "+919563385027",
     whatsappLink:
-      "https://wa.me/919113925265?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
+      "https://wa.me/917797720372?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
     office:
       "Darshan Apartment, Ground Floor, Bhanu Bhakta Sarani, Pradhan Nagar, Darjeeling, West Bengal 734003",
     projectLocation:
@@ -121,7 +121,7 @@ window.SITE_DATA = {
       slug: "government-tenders.html",
       title: "Presidency University Restoration",
       category: "Government",
-      status: "Ongoing",
+      status: "Completed",
       year: "2026",
       location: "Kurseong",
       summary:
@@ -232,7 +232,7 @@ window.SITE_DATA = {
     {
       question: "Do you work on both residential and government projects?",
       answer:
-        "Yes. CRESCENT CONSTRUCTION presents residential apartment work along with ongoing government restoration execution in Kurseong.",
+        "Yes. CRESCENT CONSTRUCTION presents residential apartment work along with government restoration execution in Kurseong.",
     },
     {
       question: "Can I book a site visit from the website?",
@@ -260,7 +260,7 @@ window.SITE_DATA = {
       title: "Kuber Niwas Brochure",
       type: "PDF",
       status: "Available",
-      href: "assets/docs/kuber-niwas-brochure.pdf",
+      href: "https://drive.google.com/your-brochure-link",
       note: "Project brochure with flat plans and highlights.",
     },
     {

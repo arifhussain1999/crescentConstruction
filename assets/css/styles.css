@@ -690,7 +690,6 @@ html[data-theme="dark"] .navbar-shell {
 
 .info-card,
 .stat-card,
-.service-card,
 .machine-card,
 .blog-card,
 .download-card,
@@ -790,6 +789,7 @@ html[data-theme="dark"] .navbar-shell {
 }
 
 .spotlight-media {
+  display: block;
   min-height: 100%;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -2409,6 +2409,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .project-image {
+  display: block;
   position: relative;
   aspect-ratio: 16/10;
   overflow: hidden;
@@ -2529,7 +2530,18 @@ input:focus, select:focus, textarea:focus {
   transition: all 0.3s ease;
 }
 
-.project-card:hover .btn-project {
+.btn-enquiry {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #fff !important;
+}
+
+.btn-enquiry:hover {
+  background: #1eb956 !important;
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3) !important;
+}
+
+.project-card:hover .btn-project:not(.btn-enquiry) {
   background: var(--brand-red);
   border-color: var(--brand-red);
   box-shadow: 0 10px 20px rgba(143, 2, 2, 0.3);
@@ -3417,5 +3429,272 @@ html {
   50% {
     transform: translateY(4px);
     opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   SERVICES SECTION (PREMIUM DESIGN)
+   ========================================================================== */
+.service-card {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.95));
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(179, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service-icon-box {
+  width: 64px;
+  height: 64px;
+  background: rgba(179, 0, 0, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-red);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(179, 0, 0, 0.2);
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--brand-red);
+  color: #fff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px rgba(179, 0, 0, 0.4);
+}
+
+.service-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--brand-red);
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.feature-list-gold {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.feature-list-gold li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.feature-list-gold li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--brand-red);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--brand-red);
+}
+
+.service-card:hover .feature-list-gold li {
+  color: #fff;
+}
+
+.service-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(179, 0, 0, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.service-card:hover .service-glow {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   FLOATING ACTIONS (BOTTOM RIGHT)
+   ========================================================================== */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.wa-btn {
+  background-color: #25D366;
+}
+
+.call-btn {
+  background-color: #B30000;
+}
+
+.floating-btn svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 768px) {
+  .floating-actions {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+  
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .floating-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE BOTTOM CONTACT BAR
+   ========================================================================== */
+.bottom-contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 14px 0;
+  z-index: 9999;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.bottom-contact a:first-child {
+  color: #25D366;
+}
+
+.bottom-contact a:last-child {
+  color: #fff;
+}
+
+.bottom-contact a:active {
+  opacity: 0.7;
+}
+
+.bar-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.show-mobile {
+  display: none;
+}
+
+.hide-mobile {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .show-mobile {
+    display: flex;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+  
+  /* Add padding to footer to avoid overlap */
+  #site-footer {
+    padding-bottom: 60px;
+  }
+}
+
+/* Ensure floating actions are visible on all devices */
+.floating-actions {
+  display: flex !important;
+}
+
+.bottom-contact {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #site-footer {
+    padding-bottom: 20px !important;
   }
 }
