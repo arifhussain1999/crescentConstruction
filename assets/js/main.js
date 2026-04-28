@@ -23,7 +23,7 @@
         <div class="navbar-shell">
           <div class="container navbar">
             <a class="brand" href="index.html" aria-label="${data.company.name}">
-              <img src="assets/images/branding/logo-mark.svg" alt="${data.company.name} logo">
+              <img src="assets/images/branding/logo-mark.jpeg" alt="${data.company.name} logo">
               <span>
                 <strong>${data.company.name}</strong>
                 <small>${data.company.tagline}</small>
