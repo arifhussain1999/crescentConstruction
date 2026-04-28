@@ -51,7 +51,7 @@
         <div class="container footer-grid">
           <div>
             <div class="brand footer-brand">
-              <img src="assets/images/branding/logo-mark.svg" alt="${data.company.name} logo">
+              <img src="assets/images/branding/logo-mark.jpeg" alt="${data.company.name} logo">
               <span>
                 <strong>${data.company.name}</strong>
               </span>
