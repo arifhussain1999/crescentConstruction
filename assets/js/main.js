@@ -103,10 +103,10 @@
       const floatingActions = document.createElement("div");
       floatingActions.className = "floating-actions";
       floatingActions.innerHTML = `
-        <a href="tel:+917797720372" class="floating-btn call-btn" aria-label="Call Us">
+        <a href="tel:+919113925265" class="floating-btn call-btn" aria-label="Call Us">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.19-2.19a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </a>
-        <a href="https://wa.me/917797720372" class="floating-btn wa-btn" aria-label="WhatsApp Us" target="_blank" rel="noreferrer">
+        <a href="https://wa.me/919113925265" class="floating-btn wa-btn" aria-label="WhatsApp Us" target="_blank" rel="noreferrer">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14.08 8.38 8.38 0 0 1 3.8.9l.5.3 4.2-1.1-1.1 4.2.3.5Z"></path></svg>
         </a>
       `;
@@ -316,7 +316,7 @@
         .map(
           (project) => `
             ${project.title === 'Kuber Niwas' 
-              ? `<a href="https://wa.me/917797720372?text=I%20am%20interested%20in%20${encodeURIComponent(project.title)}" target="_blank" rel="noreferrer" class="project-card" data-category="${project.category}">
+              ? `<a href="https://wa.me/919113925265?text=I%20am%20interested%20in%20${encodeURIComponent(project.title)}" target="_blank" rel="noreferrer" class="project-card" data-category="${project.category}">
                   <div class="project-image">
                     <img src="${project.image}" alt="${project.title}">
                     <div class="project-overlay">
@@ -379,7 +379,7 @@
                 <span class="pill">${item.metric}</span>
                 <h3>${item.title}</h3>
                 <p>${item.summary}</p>
-                <a class="btn btn-sm btn-wa" href="https://wa.me/917797720372?text=Hello%2C%20I%20am%20enquiring%20about%20the%20${encodeURIComponent(item.title)}" target="_blank" rel="noreferrer">Enquire Now</a>
+                <a class="btn btn-sm btn-wa" href="https://wa.me/919113925265?text=Hello%2C%20I%20am%20enquiring%20about%20the%20${encodeURIComponent(item.title)}" target="_blank" rel="noreferrer">Enquire Now</a>
               </div>
             </article>
           `

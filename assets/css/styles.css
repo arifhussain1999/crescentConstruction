@@ -3698,3 +3698,21 @@ html {
     padding-bottom: 20px !important;
   }
 }
+small {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  line-height: 1.2;
+  display: block;
+}
+@media (max-width: 768px) {
+  small {
+    font-size: 18px;
+  }
+}
+.tagline,
+small {
+  text-transform: none !important;
+}
+a.brand strong {
+  font-family: "Bebas Neue", sans-serif !important;
+}
