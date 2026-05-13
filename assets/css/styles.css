@@ -3716,3 +3716,21 @@ small {
 a.brand strong {
   font-family: "Bebas Neue", sans-serif !important;
 }
+
+
+.nav-toggle{
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:focus,
+.nav-toggle:active{
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+}
