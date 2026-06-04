@@ -429,7 +429,7 @@
               <span class="pill">${post.category}</span>
               <h3>${post.title}</h3>
               <p>${post.summary}</p>
-              <a class="text-link" href="blog.html#${post.id}">Read Article</a>
+              <a class="text-link" href="${post.slug}">Read Article</a>
             </article>
           `
         )

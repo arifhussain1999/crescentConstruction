@@ -204,29 +204,12 @@ window.SITE_DATA = {
   ],
   blogPosts: [
     {
-      id: "house-cost-siliguri",
-      title: "Cost of Building a House in Siliguri",
-      summary: "A planning-first look at how size, finish level, soil conditions and floors affect budget.",
-      category: "Planning",
-    },
-    {
-      id: "govt-tender-readiness",
-      title: "How Contractors Prepare for Government Tender Work",
-      summary: "Execution readiness, documentation discipline and coordination standards that matter.",
-      category: "Government",
-    },
-    {
-      id: "apartment-planning-tips",
-      title: "Apartment Planning Tips for Better Light, Parking and Circulation",
-      summary: "What owners and developers should check before committing to a residential layout.",
-      category: "Residential",
-    },
-    {
-      id: "north-bengal-real-estate",
-      title: "North Bengal Real Estate and Construction Trends",
-      summary: "Why location quality, frontage and execution credibility continue to shape value.",
-      category: "Market",
-    },
+      id: "siliguri-real-estate-guide",
+      slug: "blog-siliguri-real-estate-guide.html",
+      title: "Siliguri Real Estate Guide: Best Locations & Investment Insights",
+      summary: "An in-depth look at Siliguri's property market, key growth corridors like Sevoke Road and Matigara, and why it is the prime hub for residential investments.",
+      category: "Market Guide",
+    }
   ],
   faqs: [
     {
