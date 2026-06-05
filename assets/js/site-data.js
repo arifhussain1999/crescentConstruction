@@ -213,29 +213,34 @@ window.SITE_DATA = {
   ],
   faqs: [
     {
-      question: "Do you work on both residential and government projects?",
+      question: "What are the key legal approvals and documents I must verify before buying a flat in Siliguri?",
       answer:
-        "Yes. CRESCENT CONSTRUCTION presents residential apartment work along with government restoration execution in Kurseong.",
+        "Before purchasing a property in Siliguri, verify: (1) WBRERA Registration (mandatory for projects with >8 units or 500 sqm of land), (2) SMC (Siliguri Municipal Corporation) or SJDA sanctioned building plan, (3) Land title clarity and conversion approvals (change of land use), and (4) Mutation records. All ongoing residential projects by Crescent Construction, such as Kuber Niwas in Pradhan Nagar, are fully compliant with local civic and state regulatory guidelines.",
     },
     {
-      question: "Can I book a site visit from the website?",
+      question: "Which locations in Siliguri offer the best residential real estate investment potential?",
       answer:
-        "Yes. The website includes a site visit form and direct WhatsApp/contact options so enquiries can move quickly.",
+        "Pradhan Nagar remains a top premium choice due to its central connectivity and close proximity to Siliguri Junction, markets, and healthcare. Sevoke Road is a highly coveted commercial and premium residential corridor, while Matigara and Dagapur are rapidly expanding hotspots offering modern housing complexes. Crescent Construction has delivered landmark projects in Pradhan Nagar, including Bluebell and Gitanjali Apartment.",
     },
     {
-      question: "Do you share brochures and project documents?",
+      question: "Is WBRERA registration mandatory for all real estate projects in Siliguri, and how do I verify it?",
       answer:
-        "Yes. Kuber Niwas brochure access is available from the site and additional documents can be shared on request.",
+        "Yes, under West Bengal housing regulations, any real estate development exceeding 500 square meters or involving more than 8 apartments must be registered under WBRERA. You can verify a project's registration, sanctioned layouts, and developer details by visiting the official West Bengal RERA portal (rera.wb.gov.in) and searching under the Darjeeling district or by the developer's name.",
     },
     {
-      question: "Do you handle civil and electrical scopes together?",
+      question: "Are home loans easily available for purchasing apartments in Siliguri?",
       answer:
-        "Yes. The service structure includes integrated civil and electrical execution coordination.",
+        "Yes, major nationalized and private banks (such as SBI, HDFC, ICICI, and LIC Housing Finance) offer home loans for Siliguri properties, provided the project has clear land titles, a sanctioned plan from the Siliguri Municipal Corporation, and a valid WBRERA registration number. Crescent Construction coordinates with leading financial institutions to facilitate smooth loan approvals for buyers of projects like Kuber Niwas.",
     },
     {
-      question: "Is the construction cost calculator a final quotation?",
+      question: "What is the current average price range per square foot for flats in Siliguri?",
       answer:
-        "No. It is a planning estimate only. Final pricing depends on site condition, structural design, finish level and execution scope.",
+        "Base property prices in Siliguri vary by location: premium areas like Pradhan Nagar range between ₹2,800 to ₹4,000 per sq. ft., and Sevoke Road commands ₹3,200 to ₹4,500 per sq. ft. Emerging residential corridors like Matigara range from ₹2,200 to ₹3,000 per sq. ft. Final costs depend on the level of finishes, floor choice, parking facilities, and the developer's execution credentials.",
+    },
+    {
+      question: "How does Crescent Construction ensure structural quality and execution timelines for its Siliguri projects?",
+      answer:
+        "Unlike developers who rely entirely on external subcontractors, Crescent Construction utilizes its own fleet of heavy machinery (including a 60/90 TPH Hot Mix Plant, Sensor Paver, JCB loaders, and batch mixers) and manages civil and electrical scopes under a single, integrated team. This self-reliance ensures superior structural integrity, strict quality control, and timely project handovers.",
     },
   ],
   resources: [

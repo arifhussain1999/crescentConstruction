@@ -123,7 +123,7 @@
     const wrap = document.createElement("div");
     wrap.className = "floating-actions";
     // Inline style as ultimate override — nothing can touch these
-  wrap.className = "floating-actions";
+    wrap.className = "floating-actions";
 
     wrap.innerHTML = `
       <a class="floating-btn wa-btn" href="${wa}" target="_blank" rel="noreferrer" aria-label="WhatsApp Us">
@@ -315,7 +315,7 @@
       container.innerHTML = projects
         .map(
           (project) => `
-            ${project.title === 'Kuber Niwas' 
+            ${project.title === 'Kuber Niwas'
               ? `<a href="https://wa.me/919113925265?text=I%20am%20interested%20in%20${encodeURIComponent(project.title)}" target="_blank" rel="noreferrer" class="project-card" data-category="${project.category}">
                   <div class="project-image">
                     <img src="${project.image}" alt="${project.title}">
@@ -885,70 +885,70 @@
 
   const GALLERIES = {
     presidency: [
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_1_tkxghr.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_anngtt.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_1_okww2q.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_bpizqo.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.19_ngtawe.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392209/WhatsApp_Image_2026-04-28_at_13.43.17_vwfiqn.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392206/WhatsApp_Image_2026-04-28_at_13.43.17_1_bw8qst.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.16_xvfopi.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.15_fkdtpl.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392204/WhatsApp_Image_2026-04-28_at_13.43.15_1_carnq7.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392200/WhatsApp_Image_2026-04-28_at_13.43.14_fz8xll.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.14_1_isyhwq.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.13_3_mnts8n.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392173/WhatsApp_Image_2026-04-28_at_13.43.13_1_qwcgzf.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_2_mhknvr.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_pex4hs.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_1_tdhbdc.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_2_grki1f.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392168/WhatsApp_Image_2026-04-28_at_13.43.11_1_avbb8h.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392167/WhatsApp_Image_2026-04-28_at_13.43.09_gu1pz9.jpg",
-  "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392161/WhatsApp_Image_2026-04-28_at_13.43.04_2_qekzcx.jpg"
-]
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_1_tkxghr.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_anngtt.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392213/WhatsApp_Image_2026-04-28_at_13.43.20_1_okww2q.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.18_bpizqo.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392212/WhatsApp_Image_2026-04-28_at_13.43.19_ngtawe.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392209/WhatsApp_Image_2026-04-28_at_13.43.17_vwfiqn.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392206/WhatsApp_Image_2026-04-28_at_13.43.17_1_bw8qst.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.16_xvfopi.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392205/WhatsApp_Image_2026-04-28_at_13.43.15_fkdtpl.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392204/WhatsApp_Image_2026-04-28_at_13.43.15_1_carnq7.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392200/WhatsApp_Image_2026-04-28_at_13.43.14_fz8xll.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.14_1_isyhwq.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392199/WhatsApp_Image_2026-04-28_at_13.43.13_3_mnts8n.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392173/WhatsApp_Image_2026-04-28_at_13.43.13_1_qwcgzf.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_2_mhknvr.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_pex4hs.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392172/WhatsApp_Image_2026-04-28_at_13.43.12_1_tdhbdc.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392171/WhatsApp_Image_2026-04-28_at_13.43.11_2_grki1f.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392168/WhatsApp_Image_2026-04-28_at_13.43.11_1_avbb8h.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392167/WhatsApp_Image_2026-04-28_at_13.43.09_gu1pz9.jpg",
+      "https://res.cloudinary.com/dfgxwysg0/image/upload/f_auto,q_auto,w_1200/v1777392161/WhatsApp_Image_2026-04-28_at_13.43.04_2_qekzcx.jpg"
+    ]
   };
 
   window.openGallery = function (project) {
-  const modal = document.getElementById("galleryModal");
-  const grid = document.getElementById("galleryGrid");
+    const modal = document.getElementById("galleryModal");
+    const grid = document.getElementById("galleryGrid");
 
-  // clear old images
-  grid.innerHTML = "";
+    // clear old images
+    grid.innerHTML = "";
 
-  // render images
-  GALLERIES[project].forEach(link => {
-    const img = document.createElement("img");
-    img.src = link;
-    img.loading = "lazy";
-    grid.appendChild(img);
-  });
+    // render images
+    GALLERIES[project].forEach(link => {
+      const img = document.createElement("img");
+      img.src = link;
+      img.loading = "lazy";
+      grid.appendChild(img);
+    });
 
-  // show modal
-  modal.style.display = "flex";
+    // show modal
+    modal.style.display = "flex";
 
-  // 🔥 FIX 1: reset scroll inside modal
-  const content = document.querySelector(".gallery-content");
-  if (content) content.scrollTop = 0;
+    // 🔥 FIX 1: reset scroll inside modal
+    const content = document.querySelector(".gallery-content");
+    if (content) content.scrollTop = 0;
 
-  // 🔥 FIX 2: ensure modal opens from top
-  modal.scrollTop = 0;
+    // 🔥 FIX 2: ensure modal opens from top
+    modal.scrollTop = 0;
 
-  // 🔥 FIX 3: lock background scroll
-  document.body.style.overflow = "hidden";
+    // 🔥 FIX 3: lock background scroll
+    document.body.style.overflow = "hidden";
 
-  // 🔥 FIX 4: auto scroll to top (safe UX)
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
+    // 🔥 FIX 4: auto scroll to top (safe UX)
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-window.closeGallery = function () {
-  const modal = document.getElementById("galleryModal");
+  window.closeGallery = function () {
+    const modal = document.getElementById("galleryModal");
 
-  modal.style.display = "none";
+    modal.style.display = "none";
 
-  // 🔥 restore scroll
-  document.body.style.overflow = "auto";
-};
+    // 🔥 restore scroll
+    document.body.style.overflow = "auto";
+  };
 
 
   document.addEventListener("DOMContentLoaded", () => {
