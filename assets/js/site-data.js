@@ -204,6 +204,13 @@ window.SITE_DATA = {
   ],
   blogPosts: [
     {
+      id: "older-vs-new-home-value",
+      slug: "blog-older-vs-new-home-value.html",
+      title: "Which Has More Value: An Older Home or a New Home?",
+      summary: "Explore the advantages of newly built apartments versus older homes, focusing on energy efficiency, customization, and structural safety in Siliguri.",
+      category: "Real Estate Advice",
+    },
+    {
       id: "siliguri-real-estate-guide",
       slug: "blog-siliguri-real-estate-guide.html",
       title: "Siliguri Real Estate Guide: Best Locations & Investment Insights",
