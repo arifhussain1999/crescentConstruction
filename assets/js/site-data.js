@@ -216,6 +216,13 @@ window.SITE_DATA = {
       title: "Siliguri Real Estate Guide: Best Locations & Investment Insights",
       summary: "An in-depth look at Siliguri's property market, key growth corridors like Sevoke Road and Matigara, and why it is the prime hub for residential investments.",
       category: "Market Guide",
+    },
+    {
+      id: "hiring-civil-contractor-siliguri",
+      slug: "blog-hiring-civil-contractor-siliguri.html",
+      title: "5 Essential Checkpoints Before Hiring a Civil Contractor in Siliguri",
+      summary: "Planning to build your dream home? Learn how to select the best civil contractor in Siliguri, evaluate construction costs, and ensure legal and structural safety.",
+      category: "Construction Guide",
     }
   ],
   faqs: [
