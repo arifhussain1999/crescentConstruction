@@ -204,6 +204,13 @@ window.SITE_DATA = {
   ],
   blogPosts: [
     {
+      id: "construction-cost-siliguri-guide",
+      slug: "blog-construction-cost-siliguri-guide.html",
+      title: "House Construction Cost in Siliguri: 2026 Rates & Estimation Guide",
+      summary: "Understand the house construction cost per square foot in Siliguri, West Bengal. Compare material rates, labor charges, and key budgeting factors for new builds.",
+      category: "Construction Guide",
+    },
+    {
       id: "older-vs-new-home-value",
       slug: "blog-older-vs-new-home-value.html",
       title: "Which Has More Value: An Older Home or a New Home?",
