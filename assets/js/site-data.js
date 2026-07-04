@@ -204,6 +204,13 @@ window.SITE_DATA = {
   ],
   blogPosts: [
     {
+      id: "earthquake-resistant-construction-siliguri",
+      slug: "blog-earthquake-resistant-construction-siliguri.html",
+      title: "Earthquake-Resistant Construction in Siliguri: Guidelines for Seismic-Safe Buildings in Zone IV",
+      summary: "Learn how to ensure structural safety for house construction in Siliguri's high-risk Seismic Zone IV. Read about foundation design, reinforcement standards, and local building regulations.",
+      category: "Construction Guide",
+    },
+    {
       id: "construction-cost-siliguri-guide",
       slug: "blog-construction-cost-siliguri-guide.html",
       title: "House Construction Cost in Siliguri: 2026 Rates & Estimation Guide",
