@@ -204,6 +204,13 @@ window.SITE_DATA = {
   ],
   blogPosts: [
     {
+      id: "smart-sustainable-home-trends-siliguri-2026",
+      slug: "blog-smart-sustainable-home-trends-siliguri-2026.html",
+      title: "Smart and Sustainable Home Construction Trends in Siliguri for 2026",
+      summary: "Discover the latest trends in smart home technology, energy-efficient building materials, and sustainable construction practices reshaping real estate in North Bengal.",
+      category: "Construction Trends",
+    },
+    {
       id: "earthquake-resistant-construction-siliguri",
       slug: "blog-earthquake-resistant-construction-siliguri.html",
       title: "Earthquake-Resistant Construction in Siliguri: Guidelines for Seismic-Safe Buildings in Zone IV",
